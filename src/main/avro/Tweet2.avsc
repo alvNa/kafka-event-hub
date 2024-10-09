@@ -1,0 +1,70 @@
+[
+  {
+    "namespace": "com.atradius.examples",
+    "type": "record",
+    "name": "Country",
+    "doc": "Country Data Model",
+    "fields": [
+      {
+        "name": "iso3",
+        "aliases": [
+          "country_iso_code"
+        ],
+        "type": "string",
+        "doc": "Country code with 3 characters to describe the country"
+      },
+      {
+        "name": "language",
+        "type": [
+          "null",
+          "string"
+        ],
+        "default": null,
+        "doc": "Official language of the given country"
+      },
+      {
+        "name": "value",
+        "type": [
+          "null",
+          "string"
+        ],
+        "default": null,
+        "doc": "Country name"
+      }
+    ]
+  },
+  {
+    "namespace": "com.atradius.examples",
+    "type": "record",
+    "name": "CountrySub",
+    "fields": [
+      {
+        "name": "country",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "namespace": "com.atradius.examples",
+    "type": "record",
+    "name": "Tweet2",
+    "fields": [
+      {
+        "name": "number",
+        "type": "int"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "type": "com.atradius.examples.Country"
+      },
+      {
+        "name": "countrySubIdent",
+        "type": "com.atradius.examples.CountrySub"
+      }
+    ]
+  }
+]
