@@ -1,0 +1,15 @@
+{
+  "namespace": "com.atradius.examples",
+  "type": "record",
+  "name": "Tweet",
+  "fields": [
+    {
+      "name": "number",
+      "type": "int"
+    },
+    {
+      "name": "description",
+      "type": "string"
+    }
+  ]
+}
